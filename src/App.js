@@ -6,13 +6,13 @@ function App() {
   const [weightData, setWeightData] = useState(null);
 
   useEffect(() => {
-    axios.get('https://your-backend-url.onrender.com/aircraft/')
+    axios.get('https://military-load-backend.onrender.com/aircraft/')
       .then((res) => setAircrafts(res.data))
       .catch(console.error);
   }, []);
 
   const checkWeight = (id) => {
-    axios.get(`https://your-backend-url.onrender.com/aircraft/${id}/weight_balance`)
+    axios.get(`https://military-load-backend.onrender.com/aircraft/${id}/weight_balance`)
       .then((res) => setWeightData(res.data))
       .catch(console.error);
   };
